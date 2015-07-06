@@ -1,0 +1,13 @@
+<h1 class="text-center">新增討論版</h1>
+<div class="col-md-4 col-md-offset-4">
+	<hr>
+	<%= simple_form_for @group do |f| %>
+	<div class="form-group">
+		<%= f.input :title, input_html: {class: "form_controll"} %>
+		<%= f.input :description, input_html: {class: "form_controll"} %>
+	</div>
+	<div class="form-actions">
+		<%= f.submit "Submit", disable_with: 'Submitting...', class: "btn btn-primary"%>
+	</div>
+	<% end %>
+</div>
