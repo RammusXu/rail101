@@ -2,7 +2,7 @@
 	<div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
-			<a class="navbar-brand" href="/">Rails 101</a>
+			<a class="navbar-brand" href="/">Rammus's Rails 101</a>
 		</div>
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -11,6 +11,8 @@
 				<li> <%= link_to("註冊", new_user_registration_path) %> </li>
 				<li> <%= link_to("登入", new_user_session_path) %> </li>
 				<% else %>
+				<li><%= link_to("My Groups", account_groups_path) %></li>
+				<li><%= link_to("My Posts", account_posts_path) %></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" >
 						Hi!, <%= current_user.name %>
@@ -22,10 +24,6 @@
 							<li> <%= link_to("登出", destroy_user_session_path, method: :delete) %> </li>
 						</ul>
 				</li>
-				<li><%= link_to("My Groups", account_groups_path) %></li>
-				<li><%= link_to("My Posts", account_posts_path) %></li>
-				<li> <%= link_to("帳號設定", edit_user_registration_path )%></li>
-				<li> <%= link_to("登出", destroy_user_session_path, method: :delete) %> </li>
 				<% end %>
 			</ul>
 			</div><!-- /.navbar-collapse -->
